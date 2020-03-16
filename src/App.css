@@ -1,5 +1,16 @@
+:root {
+  --main-bg-color: #005eac;
+  --secondary-bg-color: #f6cde1;
+
+  --main-color: #005eac;
+  --secondary-color: #f6cde1;
+}
+
 .App {
+  background-color: var(--main-bg-color);
+  color: var(--secondary-color);
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -13,15 +24,21 @@
   }
 }
 
+.html {
+  font-size: 18px;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
+  min-height: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 .App-link {

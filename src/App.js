@@ -34,7 +34,7 @@ class App extends Component {
         <button id="new-quote" onClick={this.basicAction}>Another quote</button>
 
         <div id="social-media-bar">
-          <a id="tweeet-quote" href={ encodeQuoteURI("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=", this.props.basicReducer.quote, this.props.basicReducer.author) } target="_blank">TWEET</a>
+          <a id="tweet-quote" href={ encodeQuoteURI("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=", this.props.basicReducer.quote, this.props.basicReducer.author) } target="_blank" rel="noopener noreferrer">TWEET</a>
         </div>
       </div>
     );
