@@ -92,6 +92,8 @@ button {
 
 #text {
   margin: 0.5rem 1rem;
+  padding-top: 1rem;
+  line-height: 2.5rem;
 }
 
 #author {
