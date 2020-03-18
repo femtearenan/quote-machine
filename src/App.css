@@ -1,16 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Roboto|Raleway:300&display=swap');
+
 :root {
   --main-bg-color: #005eac;
+  --main-bg-op5: #005eac;
   --secondary-bg-color: #f6cde1;
 
   --main-color: #005eac;
   --secondary-color: #f6cde1;
+
+  --dark-color: #182035;
+  --dark-bg-color: #182035;
+
+  --contrast-color: hsl(26, 22%, 65%);
+
+  --white-color: hsl(0, 0%, 90%);
 }
 
 .App {
-  background-color: var(--main-bg-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-bg-color);
+  color: var(--dark-color);
   text-align: center;
   min-height: 100vh;
+  background-image: url(./img/bg00_blur.png);
+  background-repeat: no-repeat;
+  background-size: cover ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -18,14 +34,14 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .html {
   font-size: 18px;
+}
+
+.html, body, .quote-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .App-header {
@@ -35,21 +51,144 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-family: 'Poiret One', cursive;
 }
 
 h1 {
   font-size: 4rem;
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+cite {
+  position: relative;
+  top: -3rem;
+  font-style: normal;
+  letter-spacing: 2px;
+  /* line-height: 2rem; */
+}
+
+button {
+  font-family: 'Poiret One', cursive;
+}
+
+#quote-box {
+  justify-self: center;
+  margin: 1rem;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(18rem, 34rem);
+  text-align: start;
+  background-color: rgba(2,2,2,0.6);
+  border-radius: 1rem;
+}
+
+#quotation {
+  font-size: 3rem;
+}
+
+#text {
+  margin: 0.5rem 1rem;
+}
+
+#author {
+  margin-top: 0;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: end;
+}
+
+#social-media-bar {
+  margin: 0.5rem 1rem;
+
+}
+
+#social-media-bar a {
+  color: hsl(0, 0%, 90%);
+}
+
+#social-media-bar a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+#new-quote {
+  border: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--dark-bg-color);
+  color: hsl(0, 0%, 90%);
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#new-quote:hover {
+  background-color: hsl(223, 38%, 25%);
+}
+
+#new-quote:active {
+  background-color: hsl(223, 38%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+#tweet-quote svg {
+  margin: 0.5rem 1rem;
+  transform: scale(2);
+}
+
+button {
+  outline: none;
+}
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#sign {
+  margin-top: auto;
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(2,2,2,0.6);
+  display: flex;
+}
+
+#sign a {
+  margin-left: 2rem;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#sign a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+#sign svg:hover {
+  fill: hsl(0, 0%, 100%);
+}
+
+#sign p {
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+#sign svg {
+  fill: hsl(0, 0%, 90%);
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+  /* fill: #333; */
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
   }
-  to {
-    transform: rotate(360deg);
+  .App {
+    background-image: url(./img/bg00-sm.png);
   }
 }
